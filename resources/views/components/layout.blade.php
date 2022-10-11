@@ -49,7 +49,7 @@
     </nav>
     <h1>Laragigs</h1>
     <main>
-        @yield('content')
+        {{$slot}}
     </main>
 
 
