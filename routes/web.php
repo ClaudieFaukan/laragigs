@@ -16,5 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ListingController::class, 'index']);
-
 Route::get('/listing/{listing}', [ListingController::class, 'show']);
