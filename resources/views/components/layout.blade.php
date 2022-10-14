@@ -13,6 +13,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="//unpkg.com/alpinejs" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -29,6 +30,9 @@
     </head>
 </head>
 <body class="mb-48">
+
+    <x-flash-message></x-flash-message>
+
     <nav class="flex justify-between items-center mb-4">
         <a href="/">
             <img class="w-24" src="{{asset('images/logo.png')}}" alt="" class="logo"/>

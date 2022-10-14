@@ -48,6 +48,7 @@ class ListingController extends Controller
         );
 
         Listing::create($formFields);
-        return redirect('/');
+
+        return redirect('/')->with('success', 'Job created succesfully!');
     }
 }
