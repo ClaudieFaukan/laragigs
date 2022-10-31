@@ -33,6 +33,7 @@ class ListingController extends Controller
     //store a form listing
     public function store(Request $request)
     {
+
         $formFields = $request->validate(
             [
 
@@ -46,6 +47,10 @@ class ListingController extends Controller
             ]
 
         );
+
+        if ($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
 
         Listing::create($formFields);
 
