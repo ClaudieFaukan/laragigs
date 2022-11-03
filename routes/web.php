@@ -24,6 +24,9 @@ Route::get('/listing/create', [ListingController::class, 'create'])->middleware(
 // Save listing
 Route::post('/listing', [ListingController::class, 'store'])->middleware('auth');
 
+// Manage listings
+Route::get("/listing/manage", [ListingController::class, 'manage'])->middleware("auth");
+
 //Edit Listing
 Route::get('/listing/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
 
@@ -35,6 +38,7 @@ Route::delete('/listing/{listing}', [ListingController::class, 'destroy'])->midd
 
 //Show single Listing
 Route::get('/listing/{listing}', [ListingController::class, 'show']);
+
 
 // Show Register/Create Form
 Route::get('/register', [UserController::class, 'create'])->middleware("guest");
